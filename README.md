@@ -39,4 +39,32 @@ Solutions are visible by viewing [the solutions branch](https://github.com/keepp
 
 ![cattery](pics/cattery.png)
 
-testing123
+
+coverage
+    statement coverage
+        was this line executed?
+        ex: were all the lines in the function executed?
+    decision coverage
+        was every code path executed?
+        ex: if there are lots of conditionals, want to make sure all the conditionals are checked
+    condition
+        was every part of the decision executed?
+        ex: if there are 2 conditions within 1 if statement, make sure both conditions are executed
+
+what are unit tests good for?
+    find bugs WHILE your developing
+    design tool = TDD
+    more maintainable code
+    documents intentions
+    run quickly
+
+what are unit tests not good for?
+    document what you thought your code should do
+    can only catch the bugs you are aware of
+    only test in isolation
+    unit tests are not best suited for glue code! aka automation
+
+unit test structure
+    1. define your inputs and any preconditions
+    2. invoke the function
+    3. vertify that the function worked as expected
