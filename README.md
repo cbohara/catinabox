@@ -41,7 +41,7 @@ Solutions are visible by viewing [the solutions branch](https://github.com/keepp
 
 
 coverage
-    statement coverage
+    * statement coverage
         was this line executed?
         ex: were all the lines in the function executed?
     decision coverage
@@ -68,3 +68,26 @@ unit test structure
     1. define your inputs and any preconditions
     2. invoke the function
     3. vertify that the function worked as expected
+
+fixtures
+    setup and teardown
+    provide fresh fixture for each test
+    ex: pass a list to each test - provide a fresh version of the list to each test - not modifying the same list
+
+mocking
+    create "mock" object that behaves like the one you are calling
+
+    stop unit tests from doing costly operations
+    ex: pretend to sleep and not have to wait for the sleep() to happen
+
+    use mocking for unit test but supplement with system tests to ensure the system actually works
+
+patching
+    setup mocks and clean up when done
+    mocker.patch.object(autospec=True) will raise exception if used incorrectly
+
+parameterization
+    allows you to pass in a bunch of inputs into 1 test to avoid building out a bunch of separate tests
+
+* if it is hard to write a unit test for the code it usually means the code should be refactored
+* if the code can be tested with a unit test = higher quality code
